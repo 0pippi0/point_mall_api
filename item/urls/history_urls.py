@@ -4,7 +4,8 @@ from django.urls import path, include
 from item import views
 
 router = DefaultRouter()
-router.register('', views.ItemViewSet)
+router.register('', views.HistoryViewSet)
+
 
 urlpatterns = [
     path('', include(router.urls)),

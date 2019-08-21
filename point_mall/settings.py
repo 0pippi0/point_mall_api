@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'corsheaders',
     'oauth2_provider',
+    'corsheaders',
     'rest_framework',
     'user.apps.UserConfig',
     'item.apps.ItemConfig',
@@ -136,6 +136,5 @@ REST_FRAMEWORK = {
 }
 
 OAUTH2_PROVIDER = {
-    'OAUTH2_BACKEND_CLASS' : 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
+    'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
 }
-

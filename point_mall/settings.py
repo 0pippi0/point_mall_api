@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'point_mall.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'point_mall',
-        'USER': 'root',
-        'PASSWORD': '123456789',
-        'HOST': 'point-mall.cyefjzfame0s.us-east-1.rds.amazonaws.com',
+        'NAME': 'pointmall-db',
+        'USER': 'admin',
+        'PASSWORD': 'a123456789',
+        'HOST': 'pointmall-db.cge0wlwn1gr0.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306'
     }
 }
@@ -140,11 +140,10 @@ OAUTH2_PROVIDER = {
     'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
 }
 
-AWS_ACCESS_KEY_ID = 'ASIA5LIEJJN6FESDKYNY'
-AWS_SECRET_ACCESS_KEY = 'W+QUUOcGpex4WdDUVrfU6c1GBRq/TIAT09Yl9j3Z'
-AWS_SESSION_TOKEN = 'FQoGZXIvYXdzEKL//////////wEaDJBClB7BH1Mj8VAXRiKDAh4kDq0iIumobVVbdy12E+OnDE7TJO3JrTCqRwNmevV3iUbqp0Fkn38cTPSRRhjPFDxBIEiKvmWSiHcLRVOFS/kuGmGOIdVkPPKyf+gJPYrdyHAcVDgzPGSlMsjDx/RrnZt30V/n1D/xZVFRtkHnBkf8RIv+SrJjFmTG6gJE9fAM1smDoAX2KL6QGy5/KiNaddrxDbL4cyEyX/WdZT+JJJFvXnRD20RmukIaIlBjcJyG53UjC4/EoxE/sGhJOMrkB5KEk0klIwwzcvAmXdtaFzvIDNUykAIMMMlg+9t+9DgEuWM71DNM3KlFUHRxWfXCAuK9vqWeXXp2xWytni0V4J9QvRQo/tyM6wU='
-AWS_STORAGE_BUCKET_NAME = 'pointmall.dns'
-AWS_S3_CUSTOM_DOMAIN = 'd245rnvil3btqa.cloudfront.net'
+
+
+AWS_STORAGE_BUCKET_NAME = 'dns.pointmall.a'
+AWS_S3_CUSTOM_DOMAIN = 'd3ua8rdfelzss7.cloudfront.net'
 AWS_S3_URL = 'httpL//%s/' % AWS_S3_CUSTOM_DOMAIN
 AWS_S3SIGNATURE_VERSION = 's3v4'
 
@@ -154,4 +153,4 @@ STATICFILES_STORAGE = 'point_mall.storages.StaticStorage'
 
 AWS_LOCATION = 'assets/'
 ASSET_URL = '%s%s' % (AWS_S3_URL, AWS_LOCATION)
-DEFAULT_FILE_STORAGE = 'point_mall.storages.FileStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

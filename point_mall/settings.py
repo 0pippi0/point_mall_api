@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'pointmall-db',
         'USER': 'admin',
         'PASSWORD': 'a123456789',
-        'HOST': 'pointmall-db.cge0wlwn1gr0.ap-northeast-2.rds.amazonaws.com',
+        'HOST': 'database-1.cge0wlwn1gr0.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306'
     }
 }
